@@ -50,5 +50,9 @@ The raw data sets are processed with run_analisys.R script and follow the outlin
 5.The creation of a new tidy dataset
 
 
-Data dimensions are described in README.md file
+##Data Dimensions
+The main data set ("Data") in this script is the one archived after the initial merge of the testing and training set. 
+Its dimension is 10299 by 563. There are 10,299 subjects in this study, 561 attributes, 1 subject ID column and 1 Activity ID column.
+
+In the final step a tidy data set ("Data2") is created with the average of each attribute for each activity and each subject. 10299 instances are split into 180 groups (30 subjects and 6 activities) and 86 mean and standard deviation features are averaged for each group. The resulting data table has 180 rows and 88 columns. 
 
