@@ -3,6 +3,8 @@
 The script run_analysis.R downloads the data from UCI Machine Learning Repository. Data can be found at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 This analysis makes use of 6 (3 for training + 3 for testing) datasets:
+Markup : * Activity - 6 types of physical activities 
+          * Subject - identification of the subjects in the study
 *Activity - 6 types of physical activities 
 *Subject - identification of the subjects in the study
 *Feature - measurement values of the attributes used for modeling
