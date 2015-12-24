@@ -50,5 +50,5 @@ The raw data sets are processed with run_analisys.R script and follow the outlin
 5.The creation of a new tidy dataset
 
 
-Data dimensions are described in readme.md dile
+Data dimensions are described in README.md file
 
