@@ -10,7 +10,7 @@
 ##From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject-Done
 
 
-##1) prelimenaries
+###########################        1) prelimenaries         ################### 
 packages <- c("data.table", "reshape2")
 sapply(packages, require, character.only=TRUE, quietly=TRUE)
 
@@ -68,7 +68,7 @@ dim(FeaturesTrain)
 summary(FeaturesTrain)
 
 
-## 2) Merge
+############################################### 2) Merge      #################################
 ###concatonate the testing and training datasets
 dataSubject <- rbind(SubjectTrain, SubjectTest)
 dataActivity<- rbind(ActivityTrain, ActivityTest)
@@ -87,7 +87,7 @@ Data <- cbind(dataFeatures, dataCombine)
 dim(Data)  #10299   563
 
 
-##study the averages and stdv 
+######################################## 3)study the averages and stdv ##################################
 MeanSTD <- grep(".*Mean.*|.*Std.*", dataFeaturesNames$V2, ignore.case=TRUE)
 MeanSTDColumns <- c(MeanSTD, 562, 563)
 Data1 <- Data[,MeanSTDColumns]
@@ -95,7 +95,7 @@ dim(Data1)  #10299    88
 str(Data1)
 
 
-##name the activities in the data set
+########################################### 4)name the activities in the data set   #############################
 ###The activity field is originally numeric.We need to switch to charachter first. 
 activityLabels <- read.table(file.path(filesxx, "activity_labels.txt"),header = FALSE)
 Data1$activity <- as.character(Data$activity)
@@ -106,8 +106,7 @@ for (i in 1:6){
 
 head(Data$activity,30)
 
-
-##Label the Data with descriptive Variables
+#######################################5) Label the Data with descriptive Variables#########################
 
 names(Data)<-gsub("^t", "time", names(Data))  # t=time time
 names(Data)<-gsub("^f", "frequency", names(Data))  #f=frequency
@@ -119,6 +118,7 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))  #BodyBody=Body
 head(Data)
 names(Data)
 
+############################################  6)create a tidy dataset    ##################################
 ##From the data set in step 4 (Data1), create an independent tidy data set with the average of each variable for each activity and each subject.
 
 library(plyr);
