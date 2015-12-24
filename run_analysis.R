@@ -118,6 +118,15 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))  #BodyBody=Body
 head(Data)
 names(Data)
 
+names(Data1)<-gsub("^t", "time", names(Data1))  # t=time time
+names(Data1)<-gsub("^f", "frequency", names(Data1))  #f=frequency
+names(Data1)<-gsub("Acc", "Accelerometer", names(Data1))  #Acc = Accelerometer
+names(Data1)<-gsub("Gyro", "Gyroscope", names(Data1)) #Gyro=Gyroscope
+names(Data1)<-gsub("Mag", "Magnitude", names(Data1))  #Mag=Magnitude
+names(Data1)<-gsub("BodyBody", "Body", names(Data1))  #BodyBody=Body
+
+head(Data1)
+names(Data1)
 ############################################  6)create a tidy dataset    ##################################
 ##From the data set in step 4 (Data1), create an independent tidy data set with the average of each variable for each activity and each subject.
 
