@@ -38,11 +38,17 @@ No unit of measures are reported as all features were normalized and bounded wit
 
 ##Data Anaylsis
 The raw data sets are processed with run_analisys.R script and follow the outline procedure below: 
+
 1.Merge training and test sets
+
 2.Extract mean and stdv. variables
+
 3.Eloboration on the activity description
+
 4.Expand variable descriptions
+
 5.The creation of a new tidy dataset
+
 
 Data dimensions are described in readme.md dile
 
