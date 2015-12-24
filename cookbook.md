@@ -1,6 +1,6 @@
 #Code Book
-##Raw data collection
-###Collection
+
+##Data Collection
 Raw data are obtained from UCI Machine Learning repository. 
 The experiments have been carried out with a group of volunteers performing six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity were captured. The raw dataset has been randomly partitioned into two sets, where 70% of the volunteers were selected for generating the training data and 30% the test data. 
 
